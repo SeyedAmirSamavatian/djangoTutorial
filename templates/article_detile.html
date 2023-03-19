@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} 	Article_detile  {% endblock title %}
+
+{% block content %}
+
+	<h1>Article_detile</h1>
+	<hr>
+	<div>
+		<div style="background: #ddd;margin: 5px;padding: 10px;width:50vw">
+				<p style="color: blue;margin: 5px;font-weight: bold;">{{articles.title}}</p><hr>
+				<p style="margin: 5px;">{{articles.body}}</p><hr>
+				<p style="margin: 5px;">{{articles.date}}</p>
+		</div>
+	</div>
+
+{% endblock content %}

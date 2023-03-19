@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+	<div class="header" style="width: 100%;top:0px;padding:10px; display: flex;justify-content: center;align-items: center;background: #A154BD;">
+		<a style="margin:0 40px" href="">home</a>
+		<a style="margin:0 40px" href="">page 1</a>
+		<a style="margin:0 40px" href="">page 2</a>
+	</div>
+	
+	<div class="body" style="width: 100%;top: 0px;padding:10px; display: flex;justify-content: center;align-items: center;flex-direction: column;">
+		{% block content %}
+		{% endblock content %}
+	</div>
+		
+	<div class="footer" style="width: 100%;bottom: 0px;padding:10px; display: flex;justify-content: center;align-items: center;position: absolute;background:#A154BD;">
+		<p>contact us: mr.smvtn@gmail.com</p>
+	</div>
+</body>
+</html>

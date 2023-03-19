@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Footer</title>
-</head>
-<body>
+
+{% extends 'base.html' %}
+{% block title %} 	footer  {% endblock title %}
+
+
+{% block content %}
+
 	<h1>Footer</h1>
 	<p>this is Footer of site</p>
-</body>
-</html>
+	<div>
+	{% for article in articles %}
+		<div style="background: #ddd;margin: 5px;padding: 10px;width:50vw">
+			<a href="{% url 'article_detile' article.id %}">
+				<p style="color: blue;margin: 5px;font-weight: bold;">{{article.title}}</p><hr>
+				<p style="margin: 5px;">{{article.snippet}}</p><hr>
+				<p style="margin: 5px;">{{article.date}}</p>
+			</a>
+		</div>
+	{% endfor %}
+	</div>
+
+{% endblock content %}

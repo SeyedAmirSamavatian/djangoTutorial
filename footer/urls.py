@@ -7,4 +7,5 @@ urlpatterns = [
     # path('about/', views.about),
     # path('contact/', views.contact),
      path('', views.footer),
+     path('<int:id>/', views.footer_detile, name='article_detile'),
 ]
