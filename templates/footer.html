@@ -7,6 +7,13 @@
 
 	<h1>Footer</h1>
 	<p>this is Footer of site</p>
+
+	<form action="" method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Submit">
+	</form>
+
 	<div>
 	{% for article in articles %}
 		<div style="background: #ddd;margin: 5px;padding: 10px;width:50vw">
@@ -18,5 +25,8 @@
 		</div>
 	{% endfor %}
 	</div>
+
+
+
 
 {% endblock content %}

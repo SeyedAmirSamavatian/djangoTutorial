@@ -25,4 +25,5 @@ urlpatterns = [
     path('about/', views.about),
     path('contact/', views.contact),
     path('footer/', include('footer.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
